@@ -1,8 +1,31 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_wtf import FlaskForm
+from wtforms import StringField, RadioField, SubmitField, DecimalField, SelectField
+from wtforms.validators import DataRequired
+
+expenditure_categories = ['Groceries',
+                          'Drinks with friends',
+                          'To go',
+                          'Gifts',
+                          'Eating out/Takeout',
+                          'Office supplies',
+                          'Self care',
+                          'Clothes',
+                          'Transport',
+                          'Other']
+
+class TransactionForm(FlaskForm):
+    type = RadioField(label='Type', choices=[('value', 'Expenditure'), ('value_two', 'Piggy Bank')],
+                      default='value')
+    amount = DecimalField(label='Amount', validators=[DataRequired()], default=100.00)
+    category = SelectField(label='Category', choices=expenditure_categories)
+    comment = StringField(label='Label (optional)')
+    submit = SubmitField(label="Done")
 
 
 app = Flask(__name__)
+app.secret_key = "any-string-you-want-just-keep-it-secret"
 
 # ---------------- SQLite CREATE --------------------- #
 
@@ -36,7 +59,20 @@ def add_expense(variety, amount, tag, category):
 # ---------------- Flask render_template --------------------- #
 @app.route("/")
 def get_main_page():
-    return render_template("index.html")
+    form = TransactionForm()
+    return render_template("index.html", form=form)
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    form = TransactionForm()
+    if form.validate_on_submit():
+        if form.email.data == "admin@email.com" and form.password.data == "12345678":
+            print("success")
+        else:
+            print("denied")
+    return render_template("pages-login.html", form=form)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
