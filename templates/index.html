@@ -3,7 +3,6 @@
 
 {% include 'header.html' %}
 
-
 <main id="main" class="main">
     <div class="row">
         <div class="pagetitle row col-6">
@@ -82,30 +81,30 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
+                            <!--                            <div class="filter">-->
+                            <!--                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+                            <!--                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+                            <!--                                    <li class="dropdown-header text-start">-->
+                            <!--                                        <h6>Filter</h6>-->
+                            <!--                                    </li>-->
 
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
+                            <!--                                    <li><a class="dropdown-item" href="#">Today</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">This Month</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">This Year</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
 
                             <div class="card-body">
-                                <h5 class="card-title">Transactions <span>| Today</span></h5>
+                                <h5 class="card-title">Transactions <span>| This month</span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="bi bi-cart"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>145</h6>
-                                        <span class="text-success small pt-1 fw-bold">12%</span> <span
-                                            class="text-muted small pt-2 ps-1">increase</span>
+                                        <h6>{{ all_items|length }}</h6>
+                                        <!--                                        <span class="text-success small pt-1 fw-bold">+12%</span> <span-->
+                                        <!--                                            class="text-muted small pt-2 ps-1">Increase</span>-->
 
                                     </div>
                                 </div>
@@ -118,30 +117,30 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card revenue-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
+                            <!--                            <div class="filter">-->
+                            <!--                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+                            <!--                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+                            <!--                                    <li class="dropdown-header text-start">-->
+                            <!--                                        <h6>Filter</h6>-->
+                            <!--                                    </li>-->
 
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
+                            <!--                                    <li><a class="dropdown-item" href="#">Today</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">This Month</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">This Year</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
 
                             <div class="card-body">
                                 <h5 class="card-title">Expenditure <span>| This Month</span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-currency-dollar"></i>
+                                        <i class="bi bi-currency-euro"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>$3,264</h6>
-                                        <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                            class="text-muted small pt-2 ps-1">increase</span>
+                                        <h6>€{{'%0.2f' % total_amount|float}}</h6>
+                                        <!--                                        <span class="text-success small pt-1 fw-bold">8%</span> <span-->
+                                        <!--                                            class="text-muted small pt-2 ps-1">increase</span>-->
 
                                     </div>
                                 </div>
@@ -155,30 +154,30 @@
 
                         <div class="card info-card customers-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
+                            <!--                            <div class="filter">-->
+                            <!--                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+                            <!--                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+                            <!--                                    <li class="dropdown-header text-start">-->
+                            <!--                                        <h6>Filter</h6>-->
+                            <!--                                    </li>-->
 
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
+                            <!--                                    <li><a class="dropdown-item" href="#">Today</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">This Month</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">This Year</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
 
                             <div class="card-body">
-                                <h5 class="card-title">Income <span>| This Year</span></h5>
+                                <h5 class="card-title">Income <span>| This Month</span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-people"></i>
+                                        <i class="bi bi-credit-card"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>1244</h6>
-                                        <span class="text-danger small pt-1 fw-bold">12%</span> <span
-                                            class="text-muted small pt-2 ps-1">decrease</span>
+                                        <h6>€2400</h6>
+                                        <!--                                        <span class="text-danger small pt-1 fw-bold">12%</span> <span-->
+                                        <!--                                            class="text-muted small pt-2 ps-1">decrease</span>-->
 
                                     </div>
                                 </div>
@@ -191,90 +190,60 @@
                     <!-- Reports -->
                     <div class="col-12">
                         <div class="card">
-
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Reports <span>/Today</span></h5>
-
-                                <!-- Line Chart -->
-                                <div id="reportsChart"></div>
-
-                                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new ApexCharts(document.querySelector("#reportsChart"), {
-                        series: [{
-                          name: 'Sales',
-                          data: [31, 40, 28, 51, 42, 82, 56],
-                        }, {
-                          name: 'Revenue',
-                          data: [11, 32, 45, 32, 34, 52, 41]
-                        }, {
-                          name: 'Customers',
-                          data: [15, 11, 32, 18, 9, 24, 11]
-                        }],
-                        chart: {
-                          height: 350,
-                          type: 'area',
-                          toolbar: {
-                            show: false
-                          },
-                        },
-                        markers: {
-                          size: 4
-                        },
-                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                        fill: {
-                          type: "gradient",
-                          gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.3,
-                            opacityTo: 0.4,
-                            stops: [0, 90, 100]
-                          }
-                        },
-                        dataLabels: {
-                          enabled: false
-                        },
-                        stroke: {
-                          curve: 'smooth',
-                          width: 2
-                        },
-                        xaxis: {
-                          type: 'datetime',
-                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-                        },
-                        tooltip: {
-                          x: {
-                            format: 'dd/MM/yy HH:mm'
-                          },
+                            <div class="card-body"><h5 class="card-title">Report<span>| This Month</span></h5>
+                                <canvas id="barChart"
+                                        style="max-height: 400px; display: block; box-sizing: border-box; height: 248px; width: 496.8px;"
+                                        width="621" height="310"></canvas>
+                                <script>document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#barChart'), {
+                    type: 'bar',
+                    data: {
+                      labels: ['Groceries',
+                          'Drinks with friends',
+                          'To go',
+                          'Gifts',
+                          'Eating out/Takeout',
+                          'Office supplies',
+                          'Self care',
+                          'Clothes',
+                          'Transport',
+                          'Other'],
+                      datasets: [{
+                        label: 'Bar Chart',
+                        data: {{ amount_list }},
+                        backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(255, 159, 64, 0.2)',
+                          'rgba(255, 205, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(153, 102, 255, 0.2)',
+                          'rgba(201, 203, 207, 0.2)'
+                        ],
+                        borderColor: [
+                          'rgb(255, 99, 132)',
+                          'rgb(255, 159, 64)',
+                          'rgb(255, 205, 86)',
+                          'rgb(75, 192, 192)',
+                          'rgb(54, 162, 235)',
+                          'rgb(153, 102, 255)',
+                          'rgb(201, 203, 207)'
+                        ],
+                        borderWidth: 1
+                      }]
+                    },
+                    options: {
+                      scales: {
+                        y: {
+                          beginAtZero: true
                         }
-                      }).render();
-                    });
-
-
-
-
-
-
-
+                      }
+                    }
+                  });
+                });
 
                                 </script>
-                                <!-- End Line Chart -->
-
                             </div>
-
                         </div>
                     </div><!-- End Reports -->
 
@@ -319,7 +288,8 @@
                                     <tr>
                                         <th scope="row"><a href="#">#2147</a></th>
                                         <td>Bridie Kessler</td>
-                                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
+                                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a>
+                                        </td>
                                         <td>$47</td>
                                         <td><span class="badge bg-warning">Pending</span></td>
                                     </tr>
@@ -363,7 +333,8 @@
                         <ul class="nav nav-tabs d-flex" id="myTabjustified" role="tablist">
                             <li class="nav-item flex-fill" role="presentation">
                                 <button class="nav-link w-100" id="home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#home-justified" type="button" role="tab" aria-controls="home"
+                                        data-bs-target="#home-justified" type="button" role="tab"
+                                        aria-controls="home"
                                         aria-selected="false">Expenditure
                                 </button>
                             </li>
@@ -381,36 +352,42 @@
                             </li>
                         </ul>
                         <div class="tab-content pt-2" id="myTabjustifiedContent">
-                            <div class="tab-pane fade" id="home-justified" role="tabpanel" aria-labelledby="home-tab">
-                                <form method="POST" action="{{ url_for('login') }}">
-                                    {{ form.csrf_token }}
-                                    {{ form.hidden }}
-                                    {{ form.amount.label }} <br> {{ form.amount }} <br>
-                                    <br> {{ form.category.label }} <br> {{ form.category }} <br>
-                                    <br> {{ form.comment.label }} <br> {{ form.comment }} <br>
-                                    <br> {{ form.recurring.label }} <br> {{ form.recurring(value='n') }} <br>
+                            <div class="tab-pane fade" id="home-justified" role="tabpanel"
+                                 aria-labelledby="home-tab">
+                                <form method="POST" action="{{ url_for('get_main_page') }}">
+                                    {{ form1.csrf_token }}
+                                    {{ form1.amount_expenditure.label }} <br> {{ form1.amount_expenditure }} <br>
+                                    <br> {{ form1.category_expenditure.label }} <br> {{ form1.category_expenditure
+                                    }}
                                     <br>
-                                    <input type="submit" value="Done">
+                                    <br> {{ form1.comment_expenditure.label }} <br> {{ form1.comment_expenditure }}
+                                    <br>
+                                    <br> {{ form1.recurring_expenditure.label }} <br> {{
+                                    form1.recurring_expenditure(value='n') }} <br>
+                                    <br>
+                                    {{ form1.submit_expenditure }}
                                 </form>
                             </div>
                             <div class="tab-pane fade active show" id="profile-justified" role="tabpanel"
                                  aria-labelledby="profile-tab">
-                                <form method="POST" action="{{ url_for('login') }}">
-                                    {{ form.csrf_token }}
-                                    {{ form.amount.label }} <br> {{ form.amount }} <br>
-                                    <br> {{ form.comment.label }} <br> {{ form.comment }} <br>
-                                    <br> {{ form.recurring.label }} <br> {{ form.recurring(value='n') }} <br>
+                                <form method="POST" action="{{ url_for('get_main_page') }}">
+                                    {{ form2.csrf_token }}
+                                    {{ form2.amount_saving.label }} <br> {{ form2.amount_saving }} <br>
+                                    <br> {{ form2.comment_saving.label }} <br> {{ form2.comment_saving }} <br>
+                                    <br> {{ form2.recurring_saving.label }} <br> {{
+                                    form2.recurring_saving(value='n') }}
                                     <br>
-                                    <input type="submit" value="Done">
+                                    <br>
+                                    {{ form2.submit_saving }}
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="contact-justified" role="tabpanel"
-                                 <form method="POST" action="{{ url_for('login') }}">
-                                    {{ form.csrf_token }}
-                                    {{ form.amount.label }} <br> {{ form.amount }} <br>
-                                    <br> {{ form.name.label }} <br> {{ form.name }} <br>
+                            <div class="tab-pane fade" id="contact-justified" role="tabpanel">
+                                <form method="POST" action="{{ url_for('get_main_page') }}">
+                                    {{ form3.csrf_token }}
+                                    {{ form3.amount_piggy_bank.label }} <br> {{ form3.amount_piggy_bank }} <br>
+                                    <br> {{ form3.name_piggy_bank.label }} <br> {{ form3.name_piggy_bank }} <br>
                                     <br>
-                                    <input type="submit" value="Done">
+                                    {{ form3.submit_piggy_bank }}
                                 </form>
                             </div>
                         </div>
@@ -526,6 +503,9 @@
                     }]
                   });
                 });
+
+
+
 
 
 
