@@ -45,7 +45,7 @@ app.secret_key = os.getenv("SECRET_FINANCE_TRACKER_KEY")
 
 # ---------------- SQLite CREATE --------------------- #
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_FINANCE_TRACKER_URL")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", 'sqlite:///new-finance-tracker.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
