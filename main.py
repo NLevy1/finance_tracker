@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
-from wtforms import StringField, RadioField, SubmitField, DecimalField, SelectField
-from wtforms.validators import DataRequired
+from wtforms import HiddenField, StringField, SubmitField, DecimalField, SelectField, BooleanField
+from wtforms.validators import DataRequired, Length
 
 expenditure_categories = ['Groceries',
                           'Drinks with friends',
@@ -15,12 +15,14 @@ expenditure_categories = ['Groceries',
                           'Transport',
                           'Other']
 
+
 class TransactionForm(FlaskForm):
-    type = RadioField(label='Type', choices=[('value', 'Expenditure'), ('value_two', 'Piggy Bank')],
-                      default='value')
+    hidden = HiddenField()
     amount = DecimalField(label='Amount', validators=[DataRequired()], default=100.00)
     category = SelectField(label='Category', choices=expenditure_categories)
     comment = StringField(label='Label (optional)')
+    recurring = BooleanField(label='Recurring')
+    name = StringField(label='Name of goal (e.g. New House)', validators=[DataRequired(), Length(max=50)])
     submit = SubmitField(label="Done")
 
 
