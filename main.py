@@ -4,6 +4,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, DecimalField, SelectField, BooleanField
 from wtforms.validators import DataRequired, Length
 from datetime import datetime
+import os
 
 CURRENT_MONTH = datetime.now().month
 expenditure_categories = ['Groceries',
@@ -40,7 +41,7 @@ class PiggyBankForm(FlaskForm):
 
 
 app = Flask(__name__)
-app.secret_key = "any-string-you-want-just-keep-it-secret"
+app.secret_key = os.getenv("SECRET_FINANCE_TRACKER_KEY")
 
 # ---------------- SQLite CREATE --------------------- #
 
@@ -55,7 +56,7 @@ class Item(db.Model):
     amount = db.Column(db.Float, nullable=False)
     variety = db.Column(db.String(250), nullable=False)
     comment = db.Column(db.String(250), nullable=True)
-    category = db.Column(db.String(250), nullable=False)
+    category = db.Column(db.String(250), nullable=True)
     name = db.Column(db.String(250), nullable=True)
     recurring = db.Column(db.Boolean, nullable=False)
     month = db.Column(db.String(250), nullable=False)
