@@ -18,7 +18,6 @@ expenditure_categories = ['Groceries',
                           'Other']
 
 
-
 class ExpenditureForm(FlaskForm):
     amount_expenditure = DecimalField(label='Amount', validators=[DataRequired()], default=100.00)
     category_expenditure = SelectField(label='Category', choices=expenditure_categories)
