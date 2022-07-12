@@ -90,7 +90,7 @@ class Item(db.Model):
 all_items = Item.query.all()
 total_amount = 0
 for item in all_items:
-    if item.variety == 'expense':
+    if item.variety == 'expense' and item.category in expenditure_categories:
         total_amount += item.amount
 
 expenditure_categories_dict = {
