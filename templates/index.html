@@ -330,7 +330,7 @@
                                     {{ form1.amount_expenditure.label }} <br> {{ form1.amount_expenditure }} <br>
                                     <br> {{ form1.category_expenditure.label }} <br> {{ form1.category_expenditure
                                     }}
-                                    <br>
+                                    
 <!--                                    <br> {{ form1.comment_expenditure.label }} <br> {{ form1.comment_expenditure }}-->
                                     <br>
                                     <br> {{ form1.recurring_expenditure.label }} <br> {{
@@ -343,7 +343,7 @@
                                  aria-labelledby="profile-tab">
                                 <form method="POST" action="{{ url_for('get_main_page') }}">
                                     {{ form2.csrf_token }}
-                                    {{ form2.amount_saving.label }} <br> {{ form2.amount_saving }} <br>
+                                    {{ form2.amount_saving.label }} <br> {{ form2.amount_saving }}
 <!--                                    <br> {{ form2.comment_saving.label }} <br> {{ form2.comment_saving }} <br>-->
                                     <br> {{ form2.recurring_saving.label }} <br> {{
                                     form2.recurring_saving(value='n') }}
@@ -355,7 +355,7 @@
                             <div class="tab-pane fade" id="contact-justified" role="tabpanel">
                                 <form method="POST" action="{{ url_for('get_main_page') }}">
                                     {{ form3.csrf_token }}
-                                    {{ form3.amount_piggy_bank.label }} <br> {{ form3.amount_piggy_bank }} <br>
+                                    {{ form3.amount_piggy_bank.label }} <br> {{ form3.amount_piggy_bank }}
 <!--                                    <br> {{ form3.name_piggy_bank.label }} <br> {{ form3.name_piggy_bank }} <br>-->
                                     <br>
                                     {{ form3.submit_piggy_bank }}
