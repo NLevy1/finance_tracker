@@ -46,9 +46,11 @@ app.secret_key = os.getenv("SECRET_FINANCE_TRACKER_KEY")
 # ---------------- SQLite CREATE --------------------- #
 
 #Compatibility with SQLite >= 1.4.x
-uri = os.getenv("DATABASE_URL1", 'sqlite:///new-finance-tracker.db')
+uri = os.getenv("DATABASE_URL", 'sqlite:///new-finance-tracker.db')
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
+
+print(uri)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
