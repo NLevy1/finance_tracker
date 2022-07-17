@@ -50,8 +50,6 @@ uri = os.getenv("DATABASE_URL", 'sqlite:///new-finance-tracker.db')
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
-print(uri)
-
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
